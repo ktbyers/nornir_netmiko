@@ -5,6 +5,9 @@ from netmiko import ConnectHandler
 from nornir.core.configuration import Config
 from nornir.core.connections import ConnectionPlugin
 
+
+CONNECTION_NAME = "nornir_netmiko.netmiko"
+
 napalm_to_netmiko_map = {
     "ios": "cisco_ios",
     "nxos": "cisco_nxos",
