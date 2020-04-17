@@ -1,0 +1,17 @@
+---
+name: nornir_netmiko
+summary: |
+  Connection plugin and various tasks to interact with network equipment via `netmiko <https://github.com/ktbyers/netmiko/>`_.
+nornir_version: ~3
+categories:
+  - netmiko
+  - networking
+intro_file: README.md
+connection_plugins:
+  - nornir_netmiko.connections.Netmiko
+task_plugins:
+  - nornir_netmiko.tasks.netmiko_commit
+  - nornir_netmiko.tasks.netmiko_file_transfer
+  - nornir_netmiko.tasks.netmiko_save_config
+  - nornir_netmiko.tasks.netmiko_send_command
+  - nornir_netmiko.tasks.netmiko_send_config
