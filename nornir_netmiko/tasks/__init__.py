@@ -1,14 +1,14 @@
-from nornir_napalm.tasks.napalm_cli import napalm_cli
-from nornir_napalm.tasks.napalm_configure import napalm_configure
-from nornir_napalm.tasks.napalm_get import napalm_get
-from nornir_napalm.tasks.napalm_ping import napalm_ping
-from nornir_napalm.tasks.napalm_validate import napalm_validate
+from nornir_netmiko.tasks.netmiko_commit import netmiko_commit
+from nornir_netmiko.tasks.netmiko_file_transfer import netmiko_file_transfer
+from nornir_netmiko.tasks.netmiko_save_config import netmiko_save_config
+from nornir_netmiko.tasks.netmiko_send_command import netmiko_send_command
+from nornir_netmiko.tasks.netmiko_send_config import netmiko_send_config
 
 
 __all__ = (
-    "napalm_cli",
-    "napalm_configure",
-    "napalm_get",
-    "napalm_ping",
-    "napalm_validate",
+    "netmiko_commit",
+    "netmiko_file_transfer",
+    "netmiko_save_config",
+    "netmiko_send_command",
+    "netmiko_send_config",
 )
