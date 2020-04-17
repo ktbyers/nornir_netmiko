@@ -4,6 +4,7 @@ from nornir.core.task import Result, Task
 
 from nornir_netmiko.connections import CONNECTION_NAME
 
+
 def netmiko_send_command(
     task: Task,
     command_string: str,
