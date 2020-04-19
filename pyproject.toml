@@ -6,12 +6,16 @@ authors = ["Kirk Byers <ktbyers@twb-tech.com>"]
 license = "Apache-2.0"
 
 [tool.poetry.plugins."nornir.plugins.connections"]
-"nornir_netmiko.netmiko" = "nornir_netmiko.connections:Netmiko"
+#"nornir_netmiko.netmiko" = "nornir_netmiko.connections:Netmiko"
+"netmiko" = "nornir_netmiko.connections:Netmiko"
 
 [tool.poetry.dependencies]
 python = "^3.6"
 netmiko = "^3.1.0"
 nornir = { git = "https://github.com/nornir-automation/nornir/", branch = "3.0.0" }
+# Temporary
+nornir_napalm = { file = "/home/kbyers/nornir_napalm/dist/nornir_napalm-0.1.0-py3-none-any.whl" }
+#nornir_napalm = { git = "https://github.com/nornir-automation/nornir_napalm", branch = "proposal" }
 
 [tool.poetry.dev-dependencies]
 black = { version = "19.10b0", allow-prereleases = true }
