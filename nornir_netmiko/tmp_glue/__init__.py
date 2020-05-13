@@ -1,4 +1,3 @@
-from nornir_netmiko.tmp_glue.print_result import print_result
 from nornir_netmiko.tmp_glue.load_json import load_json
 from nornir_netmiko.tmp_glue.load_yaml import load_yaml
 from nornir_netmiko.tmp_glue.template_file import template_file
