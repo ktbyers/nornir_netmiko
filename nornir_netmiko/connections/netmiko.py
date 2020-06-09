@@ -3,7 +3,6 @@ from typing import Any, Dict, Optional
 from netmiko import ConnectHandler
 
 from nornir.core.configuration import Config
-from nornir.core.connections import ConnectionPlugin
 
 
 CONNECTION_NAME = "netmiko"
@@ -18,7 +17,7 @@ napalm_to_netmiko_map = {
 }
 
 
-class Netmiko(ConnectionPlugin):
+class Netmiko:
     """
     This plugin connects to the device using the Netmiko driver and sets the
     relevant connection.
@@ -57,7 +56,8 @@ class Netmiko(ConnectionPlugin):
 
         extras = extras or {}
         parameters.update(extras)
-        self.connection = ConnectHandler(**parameters)
+        connection = ConnectHandler(**parameters)
+        self.connection = connection
 
     def close(self) -> None:
         self.connection.disconnect()
