@@ -55,6 +55,7 @@ class Netmiko:
             parameters["device_type"] = platform
 
         extras = extras or {}
+        extras.update(configuration.user_defined)
         parameters.update(extras)
         connection = ConnectHandler(**parameters)
         self.connection = connection
