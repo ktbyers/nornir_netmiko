@@ -8,6 +8,8 @@ def netmiko_send_command(
     command_string: str,
     use_timing: bool = False,
     enable: bool = False,
+    config_mode=False,
+    config_command=None,
     **kwargs: Any
 ) -> Result:
     """
@@ -26,6 +28,9 @@ def netmiko_send_command(
     net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     if enable:
         net_connect.enable()
+    if config_mode:
+        cfg_mode_args = (config_command,) if config_command else tuple()
+        net_connect.config_mode(*cfg_mode_args)
     if use_timing:
         result = net_connect.send_command_timing(command_string, **kwargs)
     else:
