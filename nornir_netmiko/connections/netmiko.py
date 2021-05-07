@@ -1,3 +1,5 @@
+import socket
+
 from typing import Any, Dict, Optional
 
 from netmiko import ConnectHandler
@@ -42,6 +44,16 @@ class Netmiko:
             "port": port,
         }
 
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.bind((str(extras.pop("bind_address")), 0)) # The address to bind
+            sock.connect((str(hostname), int(port))) #The server address
+            parameters[
+                "sock"
+            ] = sock
+        except AttributeError:
+            pass
+        
         try:
             parameters[
                 "ssh_config_file"
