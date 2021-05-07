@@ -37,6 +37,8 @@ class Netmiko:
         extras: Optional[Dict[str, Any]] = None,
         configuration: Optional[Config] = None,
     ) -> None:
+
+
         parameters = {
             "host": hostname,
             "username": username,
@@ -46,14 +48,14 @@ class Netmiko:
 
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.bind((str(extras.pop("bind_address")), 0)) # The address to bind
-            sock.connect((str(hostname), int(port))) #The server address
+            sock.bind((extras.pop("bind_address"), 0))  # The address to bind
+            sock.connect((hostname, int(port)))  # The server address
             parameters[
                 "sock"
             ] = sock
-        except AttributeError:
+        except KeyError:
             pass
-        
+
         try:
             parameters[
                 "ssh_config_file"
