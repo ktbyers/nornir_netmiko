@@ -37,8 +37,6 @@ class Netmiko:
         extras: Optional[Dict[str, Any]] = None,
         configuration: Optional[Config] = None,
     ) -> None:
-
-
         parameters = {
             "host": hostname,
             "username": username,
