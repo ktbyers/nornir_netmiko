@@ -34,7 +34,7 @@ jobs:
 
       - name: Run black
         run: |
-          black --check .
+          python -m black --check .
 
       - name: Run linter
         run: |
