@@ -23,17 +23,6 @@ jobs:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
-#      - name: Cache Poetry virtualenv
-#        uses: actions/cache@v2
-#        id: cached-poetry-dependencies
-#        with:
-#          path: .venv
-#          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-#
-#      - name: Install Dependencies
-#        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-#        run: poetry install --no-interaction --no-root
-
       - name: Install the library itself
         run: poetry install --no-interaction
 
