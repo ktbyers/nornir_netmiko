@@ -37,6 +37,10 @@ jobs:
       - name: Install the library itself
         run: poetry install --no-interaction
 
+      - name: Activate virtualenv
+        run: |
+          source .venv/bin/activate
+
       - name: Inspecting things
         run: |
           echo $PATH
