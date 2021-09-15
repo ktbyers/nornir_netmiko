@@ -47,12 +47,15 @@ jobs:
 
       - name: Run black
         run: |
+          source .venv/bin/activate
           black --check .
 
       - name: Run linter
         run: |
+          source .venv/bin/activate
           pylama .
 
       - name: Run mypy
         run: |
+          source .venv/bin/activate
           mypy ./nornir_netmiko/
