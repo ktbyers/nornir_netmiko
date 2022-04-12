@@ -3,7 +3,7 @@ from nornir.core.task import Result, Task
 from nornir_netmiko.connections import CONNECTION_NAME
 
 
-def netmiko_send_multiline(
+def netmiko_multiline(
     task: Task,
     commands: Sequence[Union[str, List[str]]],
     use_timing: bool = False,
