@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nornir_netmiko"
-version = "0.1.2"
+version = "0.1.3"
 description = "Netmiko's plugins for Nornir"
 authors = ["Kirk Byers <ktbyers@twb-tech.com>"]
 license = "Apache-2.0"
@@ -8,10 +8,10 @@ readme = "README.md"
 repository = "https://github.com/ktbyers/nornir_netmiko"
 classifiers = [
         "License :: OSI Approved :: Apache Software License",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
 ]
 
 [tool.poetry.plugins."nornir.plugins.connections"]
