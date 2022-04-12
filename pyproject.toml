@@ -22,7 +22,7 @@ python = "^3.6.2"
 netmiko = "^3.4.0"
 
 [tool.poetry.dev-dependencies]
-black = { version = "21.9b0", allow-prereleases = true }
+black = "22.3.0"
 mypy = "0.910"
 pylama = "7.7.1"
 pytest = "6.2.5"
