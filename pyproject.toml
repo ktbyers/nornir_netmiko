@@ -18,8 +18,8 @@ classifiers = [
 "netmiko" = "nornir_netmiko.connections:Netmiko"
 
 [tool.poetry.dependencies]
-python = "^3.6.2"
-netmiko = "^3.4.0"
+python = "^3.7"
+netmiko = "^4.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
