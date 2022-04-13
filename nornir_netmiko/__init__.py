@@ -5,6 +5,7 @@ from nornir_netmiko.tasks import netmiko_file_transfer
 from nornir_netmiko.tasks import netmiko_save_config
 from nornir_netmiko.tasks import netmiko_send_command
 from nornir_netmiko.tasks import netmiko_send_config
+from nornir_netmiko.tasks import netmiko_multiline
 
 
 __all__ = (
@@ -14,5 +15,6 @@ __all__ = (
     "netmiko_file_transfer",
     "netmiko_save_config",
     "netmiko_send_command",
+    "netmiko_multiline",
     "netmiko_send_config",
 )
