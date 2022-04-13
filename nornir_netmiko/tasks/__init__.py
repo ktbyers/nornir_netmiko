@@ -3,6 +3,7 @@ from nornir_netmiko.tasks.netmiko_file_transfer import netmiko_file_transfer
 from nornir_netmiko.tasks.netmiko_save_config import netmiko_save_config
 from nornir_netmiko.tasks.netmiko_send_command import netmiko_send_command
 from nornir_netmiko.tasks.netmiko_send_config import netmiko_send_config
+from nornir_netmiko.tasks.netmiko_ssh_autodetect import netmiko_ssh_autodetect
 
 
 __all__ = (
@@ -11,4 +12,5 @@ __all__ = (
     "netmiko_save_config",
     "netmiko_send_command",
     "netmiko_send_config",
+    "netmiko_ssh_autodetect",
 )
