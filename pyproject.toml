@@ -21,7 +21,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.7"
 netmiko = "^4.0.0"
-textfsm = "1.1.2"
+textfsm = ">=1.1.2"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
