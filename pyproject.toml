@@ -21,12 +21,11 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.7"
 netmiko = "^4.0.0"
-textfsm = "1.1.2"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
 mypy = "0.942"
-pylama = "8.3.8"
+pylama = "8.4.1"
 pytest = "7.1.1"
 
 [build-system]
