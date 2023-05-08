@@ -563,21 +563,21 @@ files = [
 
 [[package]]
 name = "pylama"
-version = "8.3.8"
+version = "8.4.1"
 description = "Code audit tool for python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pylama-8.3.8-py3-none-any.whl", hash = "sha256:aff89423f7de118713f638c7f937fa83a5873e3bdf06d413661d9cb8dc5f3a7b"},
-    {file = "pylama-8.3.8.tar.gz", hash = "sha256:2dd852fe9312ea6012466cf17ff179668fc3d2716856fcfaaee8ce7876d83620"},
+    {file = "pylama-8.4.1-py3-none-any.whl", hash = "sha256:5bbdbf5b620aba7206d688ed9fc917ecd3d73e15ec1a89647037a09fa3a86e60"},
+    {file = "pylama-8.4.1.tar.gz", hash = "sha256:2d4f7aecfb5b7466216d48610c7d6bad1c3990c29cdd392ad08259b161e486f6"},
 ]
 
 [package.dependencies]
-mccabe = ">=0.6.1"
-pycodestyle = ">=2.8.0"
+mccabe = ">=0.7.0"
+pycodestyle = ">=2.9.1"
 pydocstyle = ">=6.1.1"
-pyflakes = ">=2.4.0"
+pyflakes = ">=2.5.0"
 
 [package.extras]
 all = ["eradicate", "mypy", "pylint", "radon", "vulture"]
@@ -585,7 +585,8 @@ eradicate = ["eradicate"]
 mypy = ["mypy"]
 pylint = ["pylint"]
 radon = ["radon"]
-tests = ["eradicate (>=2.0.0)", "mypy", "pylama-quotes", "pylint (>=2.11.1)", "pytest", "pytest-mypy", "radon (>=5.1.0)", "types-setuptools", "vulture"]
+tests = ["eradicate (>=2.0.0)", "mypy", "pylama-quotes", "pylint (>=2.11.1)", "pytest (>=7.1.2)", "pytest-mypy", "radon (>=5.1.0)", "toml", "types-setuptools", "types-toml", "vulture"]
+toml = ["toml (>=0.10.2)"]
 vulture = ["vulture"]
 
 [[package]]
@@ -838,4 +839,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "315d6b9bfe5ff99c1f8ca45e73ef8e13e633369ee5b44a2ac04ac9bda27de361"
+content-hash = "b31d3aa76dcf3a9350e21f069e9dcfaf65a84ea32c57b1f1034ef64ed94377ee"
