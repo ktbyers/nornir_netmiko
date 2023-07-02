@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nornir_netmiko"
-version = "0.2.1"
+version = "1.0.0"
 description = "Netmiko's plugins for Nornir"
 authors = ["Kirk Byers <ktbyers@twb-tech.com>"]
 license = "Apache-2.0"
@@ -12,6 +12,7 @@ classifiers = [
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
 ]
 
 [tool.poetry.plugins."nornir.plugins.connections"]
@@ -20,12 +21,11 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.7"
 netmiko = "^4.0.0"
-textfsm = "1.1.2"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
 mypy = "0.942"
-pylama = "8.3.8"
+pylama = "8.4.1"
 pytest = "7.1.1"
 
 [build-system]

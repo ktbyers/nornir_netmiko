@@ -1,0 +1,15 @@
+# rough process
+ source ~/VENV/nornir_test/bin/activate
+ git tag --list
+ git tag -a 1.0.0 -m "Version 1.0.0 Release"
+ git tag --list
+ git push origin_ssh 1.0.0
+ 
+rm dist/nornir_netmiko-1.0.0*
+export PATH="$HOME/.poetry/bin:$PATH"
+poetry build
+ls dist/
+
+twine upload -r pypitest dist/nornir_netmiko-1.0.0.tar.gz dist/nornir_netmiko-1.0.0-py3-none-any.whl 
+twine upload dist/nornir_netmiko-1.0.0.tar.gz dist/nornir_netmiko-1.0.0-py3-none-any.whl 
+
