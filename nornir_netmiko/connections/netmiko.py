@@ -62,7 +62,8 @@ class Netmiko:
                     parameters['device_type'] = best_match
                 else:
                     raise ValueError("Netmiko cannot detect the device_type")
-            parameters["device_type"] = platform
+            else:
+                parameters["device_type"] = platform
 
         extras = extras or {}
         parameters.update(extras)
