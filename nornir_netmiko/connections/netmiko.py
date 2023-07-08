@@ -1,7 +1,7 @@
 from typing import Any, Dict, Optional
 
-from netmiko import SSHDetect
 from netmiko import ConnectHandler
+from netmiko.ssh_autodetect import SSHDetect
 
 from nornir.core.configuration import Config
 
@@ -56,7 +56,7 @@ class Netmiko:
             platform = napalm_to_netmiko_map.get(platform, platform)
             if platform ==  "autodetect":# If we are using autodect
                 parameters["device_type"] = platform
-                connection = ConnectHandler(**parameters)
+                guesser = SSHDetect(**parameters)
                 best_match = guesser.autodetect()
                 if best_match: # If we find a device_type
                     parameters['device_type'] = best_match
