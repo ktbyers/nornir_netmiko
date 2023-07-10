@@ -15,7 +15,7 @@ napalm_to_netmiko_map = {
     "eos": "arista_eos",
     "junos": "juniper_junos",
     "iosxr": "cisco_xr",
-    "netmiko_auto":"autodetect"
+    "netmiko_auto": "autodetect",
 }
 
 
@@ -54,12 +54,12 @@ class Netmiko:
         if platform is not None:
             # Look platform up in corresponding map, if no entry return the host.nos unmodified
             platform = napalm_to_netmiko_map.get(platform, platform)
-            if platform ==  "autodetect":# If we are using autodect
+            if platform == "autodetect":  # If we are using autodect
                 parameters["device_type"] = platform
                 guesser = SSHDetect(**parameters)
                 best_match = guesser.autodetect()
-                if best_match: # If we find a device_type
-                    parameters['device_type'] = best_match
+                if best_match:  # If we find a device_type
+                    parameters["device_type"] = best_match
                 else:
                     raise ValueError("Netmiko cannot detect the device_type")
             else:
